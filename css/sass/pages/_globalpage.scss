@@ -1,0 +1,13 @@
+@use "../helpers" as *;
+
+* {
+  @include prefixer(box-sizing, border-box, webkit moz);
+}
+
+body {
+  background-color: #f6f6f6;
+  font: {
+    family: tahoma;
+    size: 16px;
+  }
+}

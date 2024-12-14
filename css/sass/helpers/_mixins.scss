@@ -1,0 +1,41 @@
+// Thrid Method for media queries
+@mixin minMedium {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+/* 
+  Overlay Mixin
+*/
+@mixin overlay($color, $opacity) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color, $opacity);
+}
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+
+/* 
+  ** Animation Mixin
+  ** Auto add prefixer to properties
+*/
+@mixin keyF($animation) {
+  @-webkit-keyframes #{$animation} {
+    @content;
+  }
+  @-moz-keyframes #{$animation} {
+    @content;
+  }
+  @keyframes #{$animation} {
+    @content;
+  }
+}

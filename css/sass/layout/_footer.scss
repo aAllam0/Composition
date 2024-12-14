@@ -1,0 +1,128 @@
+@use "../helpers" as *;
+
+footer {
+  background-color: #e2e2e2;
+  padding-top: 50px;
+  .container {
+    .title {
+      color: #444;
+      font-weight: normal;
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 30px; 
+      > div {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .blogs {
+        @media #{$minMedium} {
+          width: 50%;
+        }
+        .blog {
+          display: flex;
+          align-items: center;
+          &:not(:last-of-type) {
+            margin-bottom: 20px;
+          }
+          @media #{$maxMobile} {
+            flex-direction: column;
+            gap: 10px;
+          }
+          .text {
+            margin-right: 15px;
+            margin-left: 15px;
+            h4 {
+              color: $mainColor;
+              margin: 0;
+            }
+            p {
+              margin: 10px 0 0;
+              line-height: 1.6;
+              font-size: 0.9rem;
+              color: $grey;
+            }
+          }
+        }
+      }
+      .info {
+        width: 100%;
+        @media #{$minSmall} {
+          width: 50%;
+        }
+        @media #{$minMedium} {
+          width: 25%;
+        }
+        ul {
+          li {
+            color: $grey;
+            font-size: 0.9rem;
+            span {
+              color: $mainColor;
+            }
+          }
+        }
+        h4 {
+          color: #666565;
+          margin: 15px 0 5px;
+        }
+        p {
+          margin: 0;
+          color: $grey;
+        }
+      }
+      .contact {
+        width: 100%;
+        @media #{$minSmall} {
+          width: 50%;
+        }
+        @media #{$minMedium} {
+          width: 25%;
+        }
+        .form {
+          input:not([type="submit"]),
+          textarea {
+            outline: none;
+            border: 1px solid #c6bfbf;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+            padding: 10px 8px;
+            width: 100%;
+            display: block;
+            &::placeholder {
+              font-size: 0.9rem;
+            }
+          }
+          textarea {
+            resize: none;
+            height: 120px;
+          }
+          input[type="submit"] {
+            display: block;
+            border: none;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+    .copyright {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 20px;
+      color: $grey;
+      border-top: 1px solid #888;
+      @media #{$maxMobile} {
+        flex-direction: column;
+      }
+      .text {
+        @media #{$maxMobile} {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

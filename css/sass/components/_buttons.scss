@@ -1,0 +1,13 @@
+@use "../helpers" as *;
+
+.main-button {
+  background-color: rgba($mainColor, 0.7);
+  color: white;
+  padding: 4px 10px;
+  width: fit-content;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: $mainColor;
+  }
+}

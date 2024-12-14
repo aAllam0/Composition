@@ -1,0 +1,19 @@
+// First Method
+// $max_mobile: 767px;
+// $max_small: 991px;
+// $max_medium: 1199px;
+
+// $min_small: 768px;
+// $min_medium: 992px;
+// $min_large: 1200px;
+
+// Second Method
+$maxMobile: "(max-width: 767px)";
+$minSmall: "(min-width: 768px)";
+$minMedium: "(min-width: 992px)";
+$minLarge: "(min-width: 1200px)";
+
+$screens: "sm" $minSmall, "md" $minMedium, "lg" $minLarge;
+
+$mainColor: #e2494c;
+$grey: #777;

@@ -1,0 +1,13 @@
+@use "sass/helpers/vars" as *;
+
+/* Start Our Players */
+.our-players {
+  .players-boxs {
+    .box {
+      @media #{$minMedium} {
+        text-align: right;
+      }
+    }
+  }
+}
+/* End Our Players */

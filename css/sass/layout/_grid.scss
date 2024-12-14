@@ -1,0 +1,18 @@
+@use "../helpers/" as *;
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  @media #{$minSmall} {
+    width: 720px;
+  }
+  @media #{$minMedium} {
+    width: 960px;
+  }
+  @media #{$minLarge} {
+    width: 1140px;
+  }
+}
